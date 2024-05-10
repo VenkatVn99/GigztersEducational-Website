@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="brand-name">
+        <img src="images/logo.svg" />
+        <h1>Gigzters</h1>
+      </div>
+
+      <div class="navigation">
+        <ul>
+          <i id="menu-close" class="fas fa-times"></i>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="blog.html">Blog</a></li>
+          <li><a href="course.html">Courses</a></li>
+          <li><a href="contanct.html">Contact</a></li>
+        </ul>
+        <img id="menu-btn" src="images/Hamburger_icon.svg.png" />
+      </div>
+    </nav>
+
+    <!-- Blog Post Container -->
+    <section id="blog-container">
+      <div class="blogs post" id="blogss">
+        <!-- Blog post content will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <script>
+      // Function to get query parameters from URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Retrieve post_id from URL
+      const postId = getQueryParam("post_id");
+
+      // Function to display blog post content based on post_id
+      function displayBlogPost(postId) {
+        // Here, you can fetch blog post content based on postId
+        // For demonstration purposes, let's assume you have hard-coded content
+
+        if (postId === "1") {
+          // Blog Post 1 content
+          document.getElementById("blogss").innerHTML = `
+                    <div class="blog-post">
+                        <img src="images/blog-1.png">
+                        <h3>Learn Python in a easy way</h3>
+                        <p>A good Python learning blog should provide clear and concise explanations of concepts, breaking down
+                                complex topics into
+                                easy-to-understand language with plenty of examples. It should offer a structured learning path,
+                                starting from the
+                                basics and gradually progressing to more advanced topics, helping you build a solid foundation. Look
+                                for interactive
+                                code examples that allow you to run and experiment with code directly in your browser, as well as
+                                hands-on projects or
+                                coding challenges to reinforce learning. An engaging writing style keeps you interested and
+                                motivated, while community
+                                interaction provides a valuable resource for getting help and support. Regular updates ensure the
+                                blog stays current
+                                with the latest trends and updates in Python.
+                                <br><br>
+                                Some popular Python learning blogs that meet these criteria include Real Python, Python for
+                                Beginners, Programiz Python
+                                Tutorials, and The Hitchhiker's Guide to Python. Explore these resources to find the one that best
+                                suits your learning
+                                style and preferences. Happy coding!
+                                <br><br>
+                                In addition to the key features mentioned earlier, an effective Python learning blog should also
+                                cater to different
+                                learning styles and preferences. This could include providing diverse learning materials such as
+                                videos, podcasts, and
+                                infographics alongside written tutorials. A blog that covers a wide range of Python-related topics
+                                beyond just the
+                                basics, such as data science, machine learning, web development, and automation, can also be
+                                beneficial as it allows
+                                learners to explore various areas of interest within the language.
+                                <br><br>
+                                Furthermore, a blog that offers practical advice on coding best practices, debugging techniques, and
+                                optimization tips
+                                can help learners develop not only their Python skills but also their overall programming
+                                proficiency. Additionally,
+                                resources such as cheat sheets, quick reference guides, and recommended books or online courses can
+                                complement the
+                                learning experience and serve as valuable reference materials.
+                                <br><br>
+                                Lastly, an inclusive and welcoming community where learners from diverse backgrounds can connect,
+                                collaborate, and
+                                support each other fosters a positive learning environment and encourages active participation and
+                                engagement. Blogs
+                                that facilitate networking opportunities, mentorship programs, and online events such as webinars or
+                                coding challenges
+                                can enhance the overall learning experience and contribute to the growth of the Python community.
+                                <br><br>
+                                By considering these additional aspects, learners can choose a Python learning blog that not only
+                                meets their immediate
+                                learning needs but also supports their long-term growth and development as Python programmers.
+                            </p>
+                            <a href="#">Next Blog</a>
+                        </div>
+                         `;
+        } else if (postId === "2") {
+          document.getElementById("blogss").innerHTML = `
+                    <div class="blog-post">
+    <img src="images/blog-2.png">
+    <h3>Enhance Web Development Skills</h3>
+    <p>Enhancing web development skills is an ongoing journey that involves continuous learning, practice, and
+        exploration of
+        new technologies and techniques. As a web developer, mastering HTML is fundamental, as it forms the backbone of
+        web
+        pages, defining their structure and content. CSS proficiency is essential for styling web pages, allowing you to
+        create
+        visually appealing layouts and designs.
+        <br><br>
+        Understanding JavaScript empowers you to add interactivity and dynamic behavior to your websites, making them
+        more
+        engaging for users. Learning frameworks like React, Vue.js, or Angular can streamline the development process by
+        providing efficient tools and components for building robust web applications.
+        <br><br>
+        Familiarizing yourself with responsive web design principles ensures that your websites adapt seamlessly to
+        different
+        screen sizes and devices, providing a consistent user experience. Mastering version control systems like Git
+        enables you
+        to collaborate effectively with other developers, track changes, and manage project versions efficiently.
+        <br><br>
+        Knowledge of server-side programming languages such as Node.js, Python, or PHP allows you to build dynamic and
+        scalable
+        web applications that interact with databases and external APIs. Understanding RESTful API design principles
+        enables you
+        to create efficient and scalable APIs for your web applications, facilitating data exchange between client and
+        server.
+        <br><br>
+        Proficiency in database management systems like MySQL, MongoDB, or PostgreSQL equips you with the skills to
+        store,
+        retrieve, and manipulate data efficiently. Continuous integration and deployment (CI/CD) practices streamline
+        the
+        development workflow, allowing you to automate testing, build, and deployment processes for faster and more
+        reliable
+        delivery of web applications.
+        <br><br>
+        Keeping up with industry trends and emerging technologies is essential for staying relevant and competitive in
+        the field
+        of web development. Engaging in online communities, attending conferences, and participating in hackathons are
+        great
+        ways to network with peers, learn from others, and showcase your skills.
+    </p>
+    <a href="#">Next Blog</a>
+</div>
+                        `;
+        }
+
+        // Add more conditions for additional blog posts as needed
+      }
+
+      // Call the function to display the blog post content
+      displayBlogPost(postId);
+    </script>
+    <script>
+      $("#menu-btn").click(function () {
+        $("nav .navigation ul").addClass("active");
+      });
+
+      $("#menu-close").click(function () {
+        $("nav .navigation ul").removeClass("active");
+      });
+    </script>
+  </body>
+</html>
